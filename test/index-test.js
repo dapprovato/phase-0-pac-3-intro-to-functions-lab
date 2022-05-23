@@ -38,6 +38,7 @@ describe('logWhisper(string)', function() {
 describe('sayHiToHeadphonedRoommate(string)', function() {
   it('returns "I can\'t hear you!" if `string` is lowercase', function() {
     expect(sayHiToHeadphonedRoommate('hello')).toEqual("I can't hear you!");
+    expect(sayHiToHeadphonedRoommate('jolly cat')).toEqual("I can't hear you!");
   })
 
   it('returns "YES INDEED!" if `string` is uppercase', function() {
@@ -50,3 +51,16 @@ describe('sayHiToHeadphonedRoommate(string)', function() {
     );
   });
 })
+
+function shout(string) {
+  return string.toUpperCase();
+}
+function whisper(string) {
+  return string.toLowerCase();
+}
+function logShout(string) {
+  console.log("HELLO");
+}
+function logWhisper(string) {
+  console.log("hello");
+}
